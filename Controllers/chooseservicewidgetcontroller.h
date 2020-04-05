@@ -1,11 +1,17 @@
 #ifndef CHOOSESERVICEWIDGETCONTROLLER_H
 #define CHOOSESERVICEWIDGETCONTROLLER_H
 
-
-class ChooseServiceWIdgetController : public BaseController
+#include <QObject>
+#include "abstractcontroller.h"
+#include "Widgets/chooseservicewidget.h"
+class ChooseServiceWIdgetController : public AbstractController
 {
+    Q_OBJECT
 public:
-    ChooseServiceWIdgetController();
+    ChooseServiceWIdgetController(QObject *parent = nullptr);
+    void setup() override;
+private:
+    ChooseServiceWidget ui;
 };
 
 #endif // CHOOSESERVICEWIDGETCONTROLLER_H

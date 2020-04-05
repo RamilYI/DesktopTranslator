@@ -2,14 +2,27 @@
 #define MENUWIDGETCONTROLLER_H
 
 #include <QObject>
-#include <QWidget>
-
-class MenuWidgetController : public QObject
+#include "abstractcontroller.h"
+#include "basecontroller.h"
+#include "Widgets/menuwidget.h"
+#include "Common/Settings.h"
+#include <memory>
+class MenuWidgetController : public AbstractController
 {
     Q_OBJECT
 public:
     explicit MenuWidgetController(QObject *parent = nullptr);
-
+    void setup() override;
+private:
+    void connectWidgets();
+    Settings* settings;
+    BaseController* baseController;
+    MenuWidget ui;
+    std::map<QString, QString> languageMap;
+private slots:
+    void setDestLang(const QString& destParameter);
+    void setSrcLang(const QString& destParameter);
+    void createChooseServiceWidget();
 signals:
 
 };

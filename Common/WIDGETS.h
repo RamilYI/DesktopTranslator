@@ -1,4 +1,8 @@
 #ifndef WIDGETS_H
 #define WIDGETS_H
+enum WIDGETS{
+    MENUWIDGET,
+    CHOOSESERVICEWIDGET
+};
 
 #endif // WIDGETS_H
