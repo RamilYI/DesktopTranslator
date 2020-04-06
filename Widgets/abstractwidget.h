@@ -14,6 +14,9 @@ public:
             this->show();
     };
     virtual void addWidgets() = 0;
+    virtual ~AbstractWidget(){
+        ;
+    }
 signals:
 
 };

@@ -22,8 +22,5 @@ public:
         std::unique_ptr<QPushButton> addDictBtn;
         std::unique_ptr<QPushButton> hotkeysSettingsBtn;
         std::unique_ptr<QPushButton> exitBtn;
-signals:
-
 };
-
-#endif // MENUWIDGET_H
+#endif // MENUWIDGET

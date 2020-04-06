@@ -38,6 +38,6 @@ void MenuWidgetController::setSrcLang(const QString & srcParameter){
 void MenuWidgetController::createChooseServiceWidget(){
     ui.close();
     auto chooseServiceController = new ChooseServiceWIdgetController;
-    baseController->TransitionTo(chooseServiceController);
-    baseController->ShowWindow();
+    m_BaseController->TransitionTo(chooseServiceController);
+    m_BaseController->ShowWindow();
 }

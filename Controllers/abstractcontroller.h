@@ -14,7 +14,10 @@ public:
     void setContext(BaseController* baseController){
         m_BaseController = baseController;
     }
-private:
+    virtual ~AbstractController(){
+        delete m_BaseController;
+    }
+protected:
     BaseController* m_BaseController;
 signals:
 

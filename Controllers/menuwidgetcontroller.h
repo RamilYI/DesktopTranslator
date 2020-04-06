@@ -16,7 +16,6 @@ public:
 private:
     void connectWidgets();
     Settings* settings;
-    BaseController* baseController;
     MenuWidget ui;
     std::map<QString, QString> languageMap;
 private slots:
